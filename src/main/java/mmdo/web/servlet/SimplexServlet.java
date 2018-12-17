@@ -16,12 +16,12 @@ import mmdo.simplex.Simplex;
  */
 public class SimplexServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
+	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		request.getRequestDispatcher("simplex.html").forward(request, response);
+		request.getRequestDispatcher("simplex.jsp").forward(request, response);
 	}
-	
+
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		Simplex simplex = new Simplex();

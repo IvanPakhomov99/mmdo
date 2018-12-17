@@ -24,58 +24,64 @@
 	integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
 	crossorigin="anonymous"></script>
 </head>
-<body><div class="container-fluid">
-	<h1>Решение T задачи(by Пахомов И.Ю. ITKH 16-8)</h1>
-	<form action="TransportProblemServlet" method="post">
-		<table class="table table-hover">
-			<caption>Укажите, сколько тонн муки производит каждый
-				хлебокомбинат:</caption>
-			<tr>
-				<c:forEach begin="1" end="3" var="i">
-					<th><c:out value="${i}" />-ый хлебокомбинат</th>
-				</c:forEach>
-			</tr>
-			<tr>
-				<c:forEach begin="1" end="3" var="i">
-					<td><input type="number" class="form-control"
-						name="bakery${i}" required></td>
-				</c:forEach>
-			</tr>
-		</table>
-		<table class="table table-hover">
-			<caption>Укажите, сколько тонн муки необходимо каждому
-				хлебзаводу:</caption>
-			<c:forEach begin="1" end="4" var="i">
-				<th><c:out value="${i}" />-ый хлебзавод</th>
-			</c:forEach>
-			</tr>
-			<tr>
+<body>
+	<div class="container-fluid">
+		<h1>Решение T задачи(by Пахомов И.Ю. ITKH 16-8)</h1>
+		<form action="TransportProblemServlet" method="post">
+			<table class="table table-hover">
+				<caption>Укажите, сколько тонн муки производит каждый
+					хлебокомбинат:</caption>
+				<tr>
+					<c:forEach begin="1" end="3" var="i">
+						<th><c:out value="${i}" />-ый хлебокомбинат</th>
+					</c:forEach>
+				</tr>
+				<tr>
+					<c:forEach begin="1" end="3" var="i">
+						<td><input type="number" class="form-control"
+							name="bakery${i}" required></td>
+					</c:forEach>
+				</tr>
+			</table>
+			<table class="table table-hover">
+				<caption>Укажите, сколько тонн муки необходимо каждому
+					хлебзаводу:</caption>
 				<c:forEach begin="1" end="4" var="i">
-					<td><input type="number" class="form-control"
-						name="factory${i}" required></td>
-				</c:forEach>
-		</table>
-		<table class="table table-hover">
-		<tr>
-			<caption>Укажите, тарифы перевозок для 1 т муки :</caption>
-			<th>/<th>
-			<c:forEach begin="1" end="4" var="i">
-				<th><c:out value="${i}" />-ый хлебзавод</th>
-			</c:forEach>
-			<tr>
-			<c:forEach begin="1" end="3" var="i"><tr>
-			<td><th><c:out value="${i}" />-ый хлебкомбинат</th></td>
-				<c:forEach begin="1" end="4" var="j">
-				<td>	<input type="number" class="form-control"
-						name="${i}${j}" required></td>
+					<th><c:out value="${i}" />-ый хлебзавод</th>
 				</c:forEach>
 				</tr>
-			</c:forEach>
-		</table>
-		<label><input type = "radio" class="form-control" name = "method" value = "leastCostRule">Метод наименьших затрат</label>
-	<label>	<input type = "radio" class="form-control" name = "method" value = "northWestCorner">Метод северо-западного угла</label>
-	 <input type="submit" value="Найти решение" class="btn btn-info">
-	</form>
+				<tr>
+					<c:forEach begin="1" end="4" var="i">
+						<td><input type="number" class="form-control"
+							name="factory${i}" required></td>
+					</c:forEach>
+			</table>
+			<table class="table table-hover">
+				<tr>
+					<caption>Укажите, тарифы перевозок для 1 т муки :</caption>
+					<th>/
+					<th><c:forEach begin="1" end="4" var="i">
+							<th><c:out value="${i}" />-ый хлебзавод</th>
+						</c:forEach>
+				<tr>
+					<c:forEach begin="1" end="3" var="i">
+						<tr>
+							<td>
+							<th><c:out value="${i}" />-ый хлебкомбинат</th>
+							</td>
+							<c:forEach begin="1" end="4" var="j">
+								<td><input type="number" class="form-control"
+									name="${i}${j}" required></td>
+							</c:forEach>
+						</tr>
+					</c:forEach>
+			</table>
+			<label><input type="radio" class="form-control" name="method"
+				value="leastCostRule">Метод наименьших затрат</label> <label>
+				<input type="radio" class="form-control" name="method"
+				value="northWestCorner">Метод северо-западного угла
+			</label> <input type="submit" value="Найти решение" class="btn btn-info">
+		</form>
 	</div>
 </body>
 </html>

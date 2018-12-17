@@ -26,7 +26,7 @@
 </head>
 <body>
 	<div class="container-fluid">
-		<h1>Решение задачи о назначениях</h1>
+		<h1>Решение задачи о назначениях(by Пахомов И.Ю. ITKH 16-8)</h1>
 		<form action="HungrianServlet" method="post">
 			<table class="table table-hover">
 				<tr>
