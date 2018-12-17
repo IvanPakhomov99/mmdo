@@ -7,4 +7,6 @@ mmdo\web\servlet\SimplexServlet.class
 mmdo\simplex\Constraint.class
 mmdo\web\servlet\TransportProblemServlet.class
 HelloAppEngine.class
+mmdo\hungrian\HungarianAlgorithm.class
 mmdo\transport_problem\Variable.class
+mmdo\web\servlet\HungrianServlet.class
