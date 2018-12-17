@@ -19,6 +19,7 @@ public class HungrianServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	List<String> cities;
 	List<String> managers;
+	int number;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
@@ -29,13 +30,14 @@ public class HungrianServlet extends HttpServlet {
 		cities.add("Днепр(2)");
 		cities.add("Львов(3)");
 		cities.add("Киев(4)");
-		cities.add("Львов(5)");
+		cities.add("Мерефа(5)");
 		managers = new ArrayList<String>();
 		managers.add("По финансам(1)");
 		managers.add("По маркетингу(2)");
 		managers.add("По производству(3)");
 		managers.add("По персоналу(4)");
-		managers.add("По инновациям(5)");
+		managers.add("По инвестициям(5)");
+		number = 1;
 	}
 
 	/**
@@ -46,6 +48,7 @@ public class HungrianServlet extends HttpServlet {
 			throws ServletException, IOException {
 		request.setAttribute("cities", cities);
 		request.setAttribute("managers", managers);
+		request.setAttribute("number", number);
 		request.getRequestDispatcher("hungrian.jsp").forward(request, response);
 	}
 
@@ -73,6 +76,7 @@ public class HungrianServlet extends HttpServlet {
 		request.setAttribute("managers", managers);
 		request.setAttribute("decision", decision);
 		request.setAttribute("mark", mark);
+		request.setAttribute("number", number);
 		request.getRequestDispatcher("h_result.jsp").forward(request, response);
 	}
 

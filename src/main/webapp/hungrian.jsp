@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-	<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,27 +26,44 @@
 </head>
 <body>
 	<div class="container-fluid">
-		<h1>Решение задачи о назначениях(by Пахомов И.Ю. ITKH 16-8)</h1>
+		<h1>Решение задачи о назначениях</h1>
 		<form action="HungrianServlet" method="post">
 			<table class="table table-hover">
 				<tr>
 					<caption>Укажите, командировочные расходы для
 						сотрудников:</caption>
-					<th>Менеджеры
-					<th><c:forEach items="${cities}" var="var">
-							<th><c:out value="${ var}" /></th>
-						</c:forEach>
+					<th>Менеджеры</th>
+					<th>Харьков</th>
+					<th>Днепр</th>
+					<th>Львов</th>
+					<th>Киев</th>
+					<th>Мерефа</th>
+				</tr>	
 				<tr>
 					<c:forEach begin="0" end="4" var="i">
 						<tr>
-							<td>
-							<th><c:out value="${managers[i]}" /></th>
+							<c:if test="${i == 0}">
+								<th>По финансам</th>
+							</c:if>
+							<c:if test="${i == 1}">
+								<th>По маркетингу</th>
+							</c:if>
+							<c:if test="${i == 2}">
+								<th>По производству</th>
+							</c:if>
+							<c:if test="${i == 3}">
+								<th>По персоналу</th>
+							</c:if>
+							<c:if test="${i == 4}">
+								<th>По инвестициям</th>
+							</c:if>
 							<c:forEach begin="0" end="4" var="j">
 								<td><input type="number" class="form-control"
 									name="${i}${j}" required></td>
 							</c:forEach>
 						</tr>
 					</c:forEach>
+				</tr>
 			</table>
 			<input type="submit" value="Найти решение" class="btn btn-info">
 		</form>
