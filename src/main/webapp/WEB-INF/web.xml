@@ -31,4 +31,14 @@
     <servlet-name>TransportProblemServlet</servlet-name>
     <url-pattern>/TransportProblemServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>HungrianServlet</display-name>
+    <servlet-name>HungrianServlet</servlet-name>
+    <servlet-class>mmdo.web.servlet.HungrianServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HungrianServlet</servlet-name>
+    <url-pattern>/HungrianServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

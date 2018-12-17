@@ -16,7 +16,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
 <body>
-<h1>Решение задачи симплекс-методом</h1>
+<h1>Решение задачи симплекс-методом(by Пахомов И.Ю. ITKH 16-8)</h1>
 <hr>
 <div class="alert alert-success">
  Решение найдено

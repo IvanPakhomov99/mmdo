@@ -25,7 +25,7 @@
 	crossorigin="anonymous"></script>
 </head>
 <body><div class="container-fluid">
-	<h1>Решение T задачи</h1>
+	<h1>Решение T задачи(by Пахомов И.Ю. ITKH 16-8)</h1>
 	<form action="TransportProblemServlet" method="post">
 		<table class="table table-hover">
 			<caption>Укажите, сколько тонн муки производит каждый
